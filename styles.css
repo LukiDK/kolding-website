@@ -4,6 +4,40 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.container a {
+    display: inline-block;
+}
+
+.container img {
+    width: 640px;
+    height: 360px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add a smooth transition effect on hover */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -54,7 +88,6 @@ nav ul li a {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.454);
     margin: 0;
     padding: 10px 0;
     text-align: center;
@@ -89,6 +122,8 @@ nav ul li a {
     margin-bottom: 10px;
     width: auto; /* Set width to auto to match the width of the text */
     display: inline-block; /* Allow the width to adjust dynamically */
+    margin-top: -10px; /* Adjust the margin-top value to move the headline up */
+
 }
 
 .overlay p {
