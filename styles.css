@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 960px;
+    height: 540px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-item:hover .overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item h2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.454);
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 50%; /* Center the overlay vertically */
+    left: 50%; /* Center the overlay horizontally */
+    transform: translate(-50%, -50%); /* Center the overlay precisely */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Add padding inside the overlay */
+    text-align: center;
+    max-width: 80%; /* Set a maximum width for the overlay */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a cleaner look */
+}
+
+.overlay p {
+    font-size: 16px;
+    margin: 10px 0; /* Add margin top and bottom to create space between paragraphs */
+}
+
+
+.overlay.active {
+    display: flex;
+}
+
+.overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: auto; /* Set width to auto to match the width of the text */
+    display: inline-block; /* Allow the width to adjust dynamically */
+}
+
+.overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
